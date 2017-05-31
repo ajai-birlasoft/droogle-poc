@@ -165,6 +165,7 @@ class Google_Http_REST
     }
 
     if (count($uriTemplateVars)) {
+      require_once 'Google_Utils_URITemplate.php';
       $uriTemplateParser = new Google_Utils_URITemplate();
       $requestUrl = $uriTemplateParser->parse($requestUrl, $uriTemplateVars);
     }
